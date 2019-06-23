@@ -1,0 +1,27 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "creating a restaurant app that lets users input the names of burgers they'd like to eat and devour them.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UnicornBear/burger.git"
+  },
+  "author": "Justin T Bregenzer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UnicornBear/burger/issues"
+  },
+  "homepage": "https://github.com/UnicornBear/burger#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.7",
+    "mysql": "^2.17.1"
+  }
+}
