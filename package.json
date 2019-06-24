@@ -4,7 +4,7 @@
   "description": "Digital Bruger eating app the is now sequelized",
   "main": "server.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node /models/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
