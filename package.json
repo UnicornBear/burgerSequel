@@ -1,5 +1,5 @@
 {
-  "name": "burger",
+  "name": "burgerSequel",
   "version": "1.0.0",
   "description": "Digital Bruger eating app the is now sequelized",
   "main": "server.js",
@@ -26,5 +26,9 @@
     "mysql2": "^1.6.5",
     "path": "^0.12.7",
     "sequelize": "^3.30.2"
+  },
+  "engines": {
+    "node": "6.9.5",
+    "npm": "3.10.10"
   }
 }
