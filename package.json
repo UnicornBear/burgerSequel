@@ -1,18 +1,18 @@
 {
-  "name": "burgersequel",
+  "name": "burgerSequel",
   "version": "1.0.0",
   "description": "Digital Bruger eating app the is now sequelized",
   "main": "server.js",
   "scripts": {
-    "start": "node /models/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/UnicornBear/burgerSequel.git"
   },
   "author": "Justin T Bregenzer",
-  "license": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/UnicornBear/burgerSequel/issues"
   },
@@ -27,5 +27,9 @@
     "mysql2": "^1.6.5",
     "path": "^0.12.7",
     "sequelize": "^6.0.0"
+  },
+  "engines": {
+    "node": "6.9.5",
+    "npm": "3.10.10"
   }
 }
