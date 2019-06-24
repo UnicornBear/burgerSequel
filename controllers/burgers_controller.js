@@ -1,12 +1,8 @@
-// Pull in the Burger model
 var db = require("../models");
 var log = require("loglevel").getLogger("burgers_controller");
 
-//      var app = express.Router();
-
 module.exports = function(app) {
-  // Retrieve the list of all burgers in the database
-  app.get("/", function(req, res) {
+     app.get("/", function(req, res) {
     log.debug("___ENTER GET /___");
 
     db.Burger.findAll({
@@ -29,7 +25,6 @@ module.exports = function(app) {
   });
 
 
-  // Create a new burger entry
   app.post("/burgers", function(req, res) {
     log.debug("___ENTER POST /burgers___");
 
@@ -43,8 +38,7 @@ module.exports = function(app) {
     });
   });
 
-  
-  // Update an existing burger entry
+
   app.put("/burgers/:id", function(req, res) {
     log.debug("___ENTER PUT /burgers:id___");
 
@@ -52,15 +46,14 @@ module.exports = function(app) {
     log.debug("customer = " + JSON.stringify(req.body.customerName));
 
     var burgerID = req.params.id;
-    var customerName = req.body.customerName;
+    var customerName = req.body.customerName; 
 
     db.Customer.findAll({
       where: {
         name: customerName
       }
-    })  
+    })
     .then(function(customer) {
-      // Check if customer exists
       if (customer.length === 0) {
         log.debug("customer does not exist!");
 
@@ -71,7 +64,6 @@ module.exports = function(app) {
         .then(function(newCustomer) {
           log.debug("customer created = " + JSON.stringify(newCustomer));
 
-          // Add customer reference to burger
           db.Burger.update(
             {
               devoured: true,
@@ -94,10 +86,10 @@ module.exports = function(app) {
           log.debug("ERROR: Error on customer create -- " + JSON.stringify(error));
           res.json({status: "ERROR", message: error});
         })
-      } else { // customer exists
+      } else { 
         log.debug("customer exists = " + JSON.stringify(customer));
 
-        // Add customer reference to burger
+
         db.Burger.update(
           {
             devoured: true,
@@ -115,7 +107,7 @@ module.exports = function(app) {
           log.error("ERR = " + err);
           res.json({status: "ERROR", message: err});
         });
-      } // end customer exists
+      } 
     })
     .catch(function(error) {
       if(error) {
@@ -125,6 +117,3 @@ module.exports = function(app) {
     });
   });
 };
-
-// Export routes
-// module.exports = app;

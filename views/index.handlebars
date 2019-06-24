@@ -1,48 +1,51 @@
-<h1>Devour Your Burger!</h1>
+<h1> Devour the Sequelized Digital Burger</h1>
 
 <main>
   <div class="container">
     <div class="row">
+
       <div class="col s6">
         {{#each burgers}}
           {{#unless this.devoured}}
             <div class="row">
               <div class="burgerName">
-                  <div class='burgerAvailable'>{{this.name}}</div>
+                  <div class='burgerAvailable'>{{this.burger_name}}</div>
               </div>
+
               <div class="customerEats">
                 <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
                   <input type="text" id="customerName" name="customerName" placeholder="Your Name">
-                  <button type="submit" class="burgerAvailable"></button>
+                  <button type="submit" class="eatBurgerButton fa fa-cutlery fa-2x" aria-hidden="true"></button>
                 </form>
               </div>
             </div>
           {{/unless}}
         {{/each}}
-      </div>
-
+      </div> 
+      
+      
       <div class="col s6">
         {{#each burgers}}
           {{#if this.devoured}}
             <div class='burgerEaten'>
               <div>
-                {{this.name}} (eaten by {{this.Customer.name}})
+                {{this.burger_name}} (eaten by {{this.Customer.name}})
               </div>
             </div>
           {{/if}}
         {{/each}}
       </div>
     </div>
-  </div>
+  </div> 
 </main>
 
-<h2>Add A Burger Option</h2>
+<h2>Add a Yummy Burger to Devour</h2>
 
 <div class="row">
   <div class="col s12">
     <form action="/burgers" method="POST">
-      <input type="text" id="name" name="burger_name" placeholder="Enter Your Desired Burger">
-      <button type="submit" class="addBurgerButton">Add The Burger</button>
+      <input type="text" id="name" name="burger_name" placeholder="Burger Name">
+      <button type="submit" class="addBurgerButton">Add Your Desired Burger</button>
     </form>
   </div>
 </div>
