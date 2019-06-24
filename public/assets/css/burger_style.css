@@ -1,5 +1,5 @@
 html {
-    background-color: lightslategray;
+    background-color: black;
 }
 
 body {
@@ -14,6 +14,10 @@ body {
 #cute_burger {
     display: block;
     margin: auto;
+}
+
+img {
+    background-color: black;
 }
 
 h1 {
@@ -38,7 +42,7 @@ h1 {
 }
 
 .burgerAvailable:hover {
-    background-color: #81ff94;
+    background-color: greenyellow;
 }
 
 .burgerEaten {

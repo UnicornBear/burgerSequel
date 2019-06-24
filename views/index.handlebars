@@ -15,7 +15,7 @@
               <div class="customerEats">
                 <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
                   <input type="text" id="customerName" name="customerName" placeholder="Your Name">
-                  <button type="submit" class="eatBurgerButton fa fa-cutlery fa-2x" aria-hidden="true"></button>
+                  <button type="submit" class="waves-effect waves-light btn"> Devour</button>
                 </form>
               </div>
             </div>
@@ -29,7 +29,7 @@
           {{#if this.devoured}}
             <div class='burgerEaten'>
               <div>
-                {{this.burger_name}} (eaten by {{this.Customer.name}})
+                {{this.burger_name}} devoured by {{this.Customer.name}}
               </div>
             </div>
           {{/if}}
@@ -45,7 +45,7 @@
   <div class="col s12">
     <form action="/burgers" method="POST">
       <input type="text" id="name" name="burger_name" placeholder="Burger Name">
-      <button type="submit" class="addBurgerButton">Add Your Desired Burger</button>
+      <button type="submit" class="addBurgerButton">place order with digital chef</button>
     </form>
   </div>
 </div>
