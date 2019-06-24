@@ -4,8 +4,7 @@
   "description": "Digital Bruger eating app the is now sequelized",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -20,13 +19,12 @@
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
-    "express-handlebars": "^3.0.0",
     "loglevel": "^1.4.1",
+    "express-handlebars": "^3.0.0",
     "method-override": "^2.3.7",
     "mysql": "^2.13.0",
-    "mysql2": "^1.6.5",
     "path": "^0.12.7",
-    "sequelize": "^6.0.0"
+    "sequelize": "^3.30.2"
   },
   "engines": {
     "node": "6.9.5",

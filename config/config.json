@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "1Password!324",
-    "database": "burgerSequel_db",
+    "database": "burgersequel_db",
     "host": "localhost",
     "port": 3306,
     "dialect": "mysql"
