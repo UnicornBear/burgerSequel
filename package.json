@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/UnicornBear"
+    "url": "https://github.com/UnicornBear/burgerSequel.git"
   },
   "author": "Justin T Bregenzer",
   "license": "",
   "bugs": {
-    "url": "https://github.com/UnicornBear"
+    "url": "https://github.com/UnicornBear/burgerSequel/issues"
   },
-  "homepage": "https://github.com/UnicornBear",
+  "homepage": "https://github.com/UnicornBear/burgerSequelr#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
